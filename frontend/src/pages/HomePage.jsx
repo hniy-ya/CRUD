@@ -3,12 +3,12 @@ import { useProductStore } from "../store/useProductStore";
 import { HandCoinsIcon, PackageIcon, PlusCircle, RefreshCcw, SearchIcon, SearchXIcon, ShoppingBagIcon } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import AddProduct from "../components/AddProduct";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 function HomePage() {
     const { products, loading, error, fetchProducts } = useProductStore();
 
-    const navigate = useNavigate();
+ 
 
     useEffect(() => {
         fetchProducts();
@@ -27,10 +27,7 @@ function HomePage() {
                         Add Product
                     </button>
 
-                    <button className="btn btn-info ml-3" onClick={() => navigate("/POS")}>
-                        <ShoppingBagIcon className="size-5 mr-2 mx-auto" />
-                        POS
-                    </button>
+                   
                 </div>
 
                 <button className="btn btn-ghost btn-circle w-full sm:w-auto ">
